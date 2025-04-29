@@ -30,19 +30,28 @@ Yet Another Chatbot is a web application designed to manage chat sessions based 
    PINECONE_INDEX=<Pinecone index name>
    PINECONE_NAMESPACE=<namespace prefix>
    EMBEDDING_MODEL=<OpenAI embedding model, e.g., "text-embedding-ada-002">
+   OPENAI_API_KEY=<your OpenAI API Key>
+   DATABASE_URL=sqlite:///./sessions.db
    ```
 
-3. Install frontend dependencies:
+   Create a `.env` file in the `webapp/` directory and add the following variables:
+
+   ```env
+   NEXT_PUBLIC_API_URL=http://localhost:8000
+   ```
+
+3. Install backend dependencies:
+
+   ```bash
+   cd worker
+   pip install -r requirements.txt
+   ```
+
+4. Install frontend dependencies:
 
    ```bash
    cd webapp
    pnpm install
-   ```
-
-4. Install backend dependencies:
-   ```bash
-   cd ../worker
-   pip install -r requirements.txt
    ```
 
 ## Running the Project
@@ -67,7 +76,7 @@ Yet Another Chatbot is a web application designed to manage chat sessions based 
    ```
 2. Start the FastAPI server:
    ```bash
-   python main.py
+   uvicorn main:app --reload --host 0.0.0.0 --port 8000
    ```
 3. The backend will be available at `http://localhost:8000`.
 
@@ -100,3 +109,7 @@ Yet Another Chatbot is a web application designed to manage chat sessions based 
 - The backend is designed to handle chat sessions and upload documents to Pinecone for contextual retrieval.
 
 For more information, refer to the code documentation or contact the development team.
+
+## License
+
+Do not use this code for any commercial purposes. This project is for educational purposes only and is not intended for production use.

@@ -18,7 +18,7 @@ Yet Another Chatbot is a web application designed to manage chat sessions based 
 1. Clone the repository:
 
    ```bash
-   git clone <repository URL>
+   git clone https://github.com/thatsimo/yet-another-chatbot.git
    cd yet-another-chatbot
    ```
 

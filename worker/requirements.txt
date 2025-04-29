@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+langchain-community
+langchain_openai
+langchain
+openai
+langchain_pinecone
+pinecone
+python-dotenv
+PyMuPDF
+pandas
+lxml
+python-multipart
